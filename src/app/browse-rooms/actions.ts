@@ -25,7 +25,9 @@ export async function editRoomAction(
     data: { name: data.name, description: data.description },
   });
 
-  return redirect("/settings");
+  revalidatePath("/rooms");
+
+  return redirect("/browse-rooms");
 }
 
 export async function deleteRoomAction(id: string) {

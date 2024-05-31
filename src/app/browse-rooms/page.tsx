@@ -2,6 +2,8 @@ import { getRoomsByQuery } from "@/use-cases/rooms";
 
 import { Toolbar } from "@/components/toolbar";
 import { RoomCard } from "@/components/room";
+import { validateRequest } from "@/lib/auth";
+import { redirect } from "next/navigation";
 
 export default async function BrowseRoomsPage({
   searchParams,
@@ -10,6 +12,10 @@ export default async function BrowseRoomsPage({
     query?: string;
   };
 }) {
+  const { user } = await validateRequest();
+
+  if (!user) redirect("/");
+
   const query = searchParams?.query || "";
   const rooms = await getRoomsByQuery({ query });
 
@@ -25,7 +31,7 @@ export default async function BrowseRoomsPage({
       </div>
       <Toolbar />
       {rooms.map((room) => (
-        <RoomCard key={room.id} {...room} />
+        <RoomCard key={room.id} {...room} edit={room.userId === user.id} />
       ))}
     </div>
   );

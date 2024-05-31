@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { LogInIcon, Settings } from "lucide-react";
-import { DeleteRoomForm } from "@/app/settings/delete-room-form";
+import { DeleteRoomForm } from "@/app/browse-rooms/delete-room-form";
 
 export function RoomCard({
   id,
@@ -29,7 +29,7 @@ export function RoomCard({
       {edit && (
         <div className="flex -mb-4">
           <Button asChild size="icon" variant="ghost" className="rounded-full">
-            <Link href={`/settings/edit?id=${id}`}>
+            <Link href={`/browse-rooms/edit?id=${id}`}>
               <span className="sr-only">edit</span>
               <Settings className="w-4 h-4" />
             </Link>
