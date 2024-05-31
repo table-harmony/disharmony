@@ -17,13 +17,10 @@ model User {
   id            String   @id @default(auto()) @map("_id") @db.ObjectId
   username      String
   picture       String
-  email         String?
-  emailVerified DateTime? 
-  password      String?
-  salt          String?
+  email         String?  @unique
+  google_id     String?  @unique
 
   sessions     Session[]
-  accounts     Account[]
 }
 
 model Session {
@@ -34,15 +31,3 @@ model Session {
   user      User     @relation(references: [id], fields: [userId], onDelete: Cascade)
 }
 
-enum AccountType {
-  google
-  github
-}
-
-model Account {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  type      AccountType
-  userId    String   @db.ObjectId
-
-  user      User     @relation(references: [id], fields: [userId], onDelete: Cascade)
-}
