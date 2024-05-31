@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "disharmony",
   url: "https://disharmony.vercel.app",
   author: "tableharmony",
-  description: "discord clone",
+  description: "Socialize via voice chats and more",
   links: {
     github: "https://github.com/table-harmony/disharmony",
   },
