@@ -6,6 +6,7 @@ import { siteConfig } from "@/config/site";
 
 import { cn } from "@/lib/utils";
 import { ContextProvider } from "@/components/context-provider";
+import { SiteHeader } from "@/components/site-header";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -41,6 +42,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       >
         <ContextProvider>
           <div className="relative flex min-h-screen flex-col bg-background">
+            <SiteHeader />
             {children}
           </div>
         </ContextProvider>

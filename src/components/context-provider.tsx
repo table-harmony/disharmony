@@ -1,9 +1,14 @@
-"use client";
-
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/theme-provider";
+import { SessionProvider } from "@/components/session-provider";
+import { validateRequest } from "@/lib/auth";
 
-export function ContextProvider({ children }: { children: React.ReactNode }) {
+export async function ContextProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const session = await validateRequest();
   return (
     <ThemeProvider
       attribute="class"
@@ -11,8 +16,10 @@ export function ContextProvider({ children }: { children: React.ReactNode }) {
       enableSystem
       disableTransitionOnChange
     >
-      {children}
-      <Toaster />
+      <SessionProvider value={session}>
+        {children}
+        <Toaster />
+      </SessionProvider>
     </ThemeProvider>
   );
 }

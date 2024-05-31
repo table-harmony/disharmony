@@ -20,6 +20,7 @@ model User {
   email         String?  @unique
   google_id     String?  @unique
 
+  rooms        Room[]
   sessions     Session[]
 }
 
@@ -31,3 +32,10 @@ model Session {
   user      User     @relation(references: [id], fields: [userId], onDelete: Cascade)
 }
 
+model Room {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @db.ObjectId
+  name String 
+  description String
+  user      User     @relation(references: [id], fields: [userId], onDelete: Cascade)
+}
