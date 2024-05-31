@@ -24,7 +24,7 @@ export default function Home() {
         </Button>
       </SignedIn>
       <SignedOut>
-        <Button className="max-w-6xl" asChild>
+        <Button className="w-72 md:w-96" asChild>
           <Link href="/auth/login">
             Get started <ArrowRightIcon className="ml-2 w-4 h-4" />
           </Link>

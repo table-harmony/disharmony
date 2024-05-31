@@ -31,7 +31,7 @@ export const LogoutForm = () => {
   };
 
   return (
-    <div className="container relative md:max-w-lg 2xl:max-w-xl space-y-6">
+    <div className="md:max-w-lg 2xl:max-w-xl space-y-6">
       <form action={onSubmit} className="space-y-2">
         <LoaderButton
           isLoading={isPending}

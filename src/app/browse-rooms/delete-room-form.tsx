@@ -38,7 +38,7 @@ export function DeleteRoomForm({ id }: { id: string }) {
   return (
     <AlertDialog>
       <AlertDialogTrigger asChild>
-        <Button asChild size="icon" variant="ghost" className="rounded-full">
+        <Button size="icon" variant="ghost" className="rounded-full">
           <span className="sr-only">delete</span>
           <TrashIcon className="h-4 w-4" />
         </Button>
