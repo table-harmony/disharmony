@@ -1,6 +1,6 @@
 "use client";
 
-import { Search } from "@/components/ui/input";
+import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useDebouncedCallback } from "use-debounce";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -25,7 +25,7 @@ export function SearchRooms() {
       <Label htmlFor="search" className="sr-only">
         Search
       </Label>
-      <Search
+      <Input
         className="w-full md:max-w-96"
         defaultValue={searchParams.get("query")?.toString()}
         placeholder="Search..."

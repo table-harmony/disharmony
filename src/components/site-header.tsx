@@ -12,7 +12,9 @@ export function SiteHeader() {
   return (
     <header className="top-0 w-full border-b border-border/40">
       <div className="container flex h-14 items-center">
-        <MobileNav />
+        <div className="block md:hidden flex-1">
+          <MobileNav />
+        </div>
         <div className="hidden md:flex items-center gap-8 flex-1">
           <Link href="/" className="hidden md:flex items-center gap-2">
             <PodcastIcon className="h-6 w-6" />

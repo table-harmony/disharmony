@@ -41,9 +41,6 @@ export function MobileNav() {
             <MobileLink href="/browse-rooms" onOpenChange={setOpen}>
               Search rooms
             </MobileLink>
-            <MobileLink href="/rooms" onOpenChange={setOpen}>
-              Your rooms
-            </MobileLink>
           </div>
         </ScrollArea>
       </SheetContent>

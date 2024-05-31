@@ -13,5 +13,5 @@ export async function createRoomAction(roomData: Omit<Room, "id" | "userId">) {
 
   await createRoom({ ...roomData, userId: user.id });
 
-  return redirect("/settings");
+  return redirect("/browse-rooms");
 }

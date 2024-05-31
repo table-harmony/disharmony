@@ -5,7 +5,7 @@ import { PenIcon } from "lucide-react";
 
 export function Toolbar() {
   return (
-    <div className="flex justify-between">
+    <div className="flex gap-4 justify-between">
       <SearchRooms />
       <Button asChild>
         <Link href="/create-room">
