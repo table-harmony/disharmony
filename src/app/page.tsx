@@ -1,8 +1,10 @@
+import Link from "next/link";
+
+import { siteConfig } from "@/config/site";
+
 import { SignedIn, SignedOut } from "@/components/signed";
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/config/site";
 import { ArrowRightIcon, PodcastIcon } from "lucide-react";
-import Link from "next/link";
 
 export default function Home() {
   return (
