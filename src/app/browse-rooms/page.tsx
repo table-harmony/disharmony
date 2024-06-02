@@ -20,19 +20,21 @@ export default async function BrowseRoomsPage({
   const rooms = await getRoomsByQuery({ query });
 
   return (
-    <div className="container lg:px-20 pt-12 pb-24 md:py-20 space-y-10 flex flex-col">
+    <div className="container flex flex-col space-y-10 pb-24 pt-12 md:py-20 lg:px-20">
       <div className="flex flex-col items-center">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-balance text-center">
+        <h1 className="text-balance text-center text-2xl font-bold md:text-3xl lg:text-4xl">
           Our rooms
         </h1>
-        <p className="max-w-[750px] text-center text-muted-foreground text-sm">
+        <p className="max-w-[750px] text-center text-sm text-muted-foreground">
           Search, Interact and socialize with other people in our rooms.
         </p>
       </div>
       <Toolbar />
-      {rooms.map((room) => (
-        <RoomCard key={room.id} {...room} edit={room.userId === user.id} />
-      ))}
+      <div className="flex flex-col gap-8 md:grid md:grid-cols-3">
+        {rooms.map((room) => (
+          <RoomCard key={room.id} {...room} edit={room.userId === user.id} />
+        ))}
+      </div>
     </div>
   );
 }

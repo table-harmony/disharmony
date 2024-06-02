@@ -25,13 +25,13 @@ export function RoomCard({
   edit?: boolean;
 }) {
   return (
-    <Card className="max-w-sm">
+    <Card className="w-full md:max-w-sm">
       {edit && (
-        <div className="flex -mb-4">
+        <div className="-mb-4 flex">
           <Button asChild size="icon" variant="ghost" className="rounded-full">
             <Link href={`/browse-rooms/edit?id=${id}`}>
               <span className="sr-only">edit</span>
-              <Settings className="w-4 h-4" />
+              <Settings className="h-4 w-4" />
             </Link>
           </Button>
           <DeleteRoomForm id={id} />
@@ -44,7 +44,7 @@ export function RoomCard({
       <CardContent>
         <Button className="w-full" asChild>
           <Link href={`/room/${id}`}>
-            <LogInIcon className="mr-2 w-4 h-4" /> Join room
+            <LogInIcon className="mr-2 h-4 w-4" /> Join room
           </Link>
         </Button>
       </CardContent>

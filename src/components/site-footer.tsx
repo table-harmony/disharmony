@@ -4,9 +4,9 @@ import { siteConfig } from "@/config/site";
 
 export function SiteFooter() {
   return (
-    <footer className="container z-10 py-8 flex flex-col relative">
-      <div className="mt-16 flex flex-col-reverse md:flex-row md:justify-between items-center border-t border-border pt-4 md:pt-8 sm:mt-20 lg:mt-24">
-        <p className="text-balance text-sm leading-loose text-muted-foreground w-full text-left mt-4 md:mt-0">
+    <footer className="container relative z-10 flex flex-col py-8">
+      <div className="mt-16 flex flex-col-reverse items-center border-t border-border pt-4 sm:mt-20 md:flex-row md:justify-between md:pt-8 lg:mt-24">
+        <p className="mt-4 w-full text-balance text-left text-sm leading-loose text-muted-foreground md:mt-0">
           Built by{" "}
           <Link
             href="https://tableharmony.io"
@@ -26,7 +26,7 @@ export function SiteFooter() {
             GitHub.
           </Link>
         </p>
-        <div className="w-full justify-start flex md:justify-end">
+        <div className="flex w-full justify-start md:justify-end">
           <ModeToggle />
         </div>
       </div>

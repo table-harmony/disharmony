@@ -12,11 +12,11 @@ export function SiteHeader() {
   return (
     <header className="top-0 w-full border-b border-border/40">
       <div className="container flex h-14 items-center">
-        <div className="block md:hidden flex-1">
+        <div className="block flex-1 md:hidden">
           <MobileNav />
         </div>
-        <div className="hidden md:flex items-center gap-8 flex-1">
-          <Link href="/" className="hidden md:flex items-center gap-2">
+        <div className="hidden flex-1 items-center gap-8 md:flex">
+          <Link href="/" className="hidden items-center gap-2 md:flex">
             <PodcastIcon className="h-6 w-6" />
             <span className="font-bold">{siteConfig.name}</span>
           </Link>

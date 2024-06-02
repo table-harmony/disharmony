@@ -35,7 +35,7 @@ export const UserDropdown = async () => {
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
           <Link href="/auth/logout">
-            <LogOutIcon className="h-4 w-4 mr-2" /> Logout
+            <LogOutIcon className="mr-2 h-4 w-4" /> Logout
           </Link>
         </DropdownMenuItem>
       </DropdownMenuContent>

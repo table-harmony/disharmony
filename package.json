@@ -30,8 +30,8 @@
     "lucide-react": "^0.379.0",
     "next": "14.2.3",
     "next-themes": "^0.3.0",
-    "react": "^18",
-    "react-dom": "^18",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-hook-form": "^7.51.5",
     "stream-chat": "^8.33.0",
     "tailwind-merge": "^2.3.0",
@@ -40,14 +40,15 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
+    "@types/node": "^20.13.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.0",
     "eslint-config-next": "14.2.3",
-    "postcss": "^8",
+    "postcss": "^8.4.38",
+    "prettier-plugin-tailwindcss": "^0.6.1",
     "prisma": "^5.14.0",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.4.5"
   }
 }
