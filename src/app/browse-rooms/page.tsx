@@ -30,11 +30,17 @@ export default async function BrowseRoomsPage({
         </p>
       </div>
       <Toolbar />
-      <div className="flex flex-col gap-8 md:grid md:grid-cols-3">
-        {rooms.map((room) => (
-          <RoomCard key={room.id} {...room} edit={room.userId === user.id} />
-        ))}
-      </div>
+      {rooms.length === 0 ? (
+        <div className="grid items-center justify-center">
+          No rooms available
+        </div>
+      ) : (
+        <div className="flex flex-col gap-8 md:grid md:grid-cols-3">
+          {rooms.map((room) => (
+            <RoomCard key={room.id} {...room} edit={room.userId === user.id} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
