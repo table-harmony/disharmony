@@ -1,4 +1,4 @@
-import { getRoom, getRooms } from "@/use-cases/rooms";
+import { getRoom, getRooms } from "@/infrastructure/rooms";
 import { VideoPlayer } from "./video-player";
 import { notFound } from "next/navigation";
 import { isValidObjectId } from "@/lib/utils";

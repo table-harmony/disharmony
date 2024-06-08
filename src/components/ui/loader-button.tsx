@@ -5,7 +5,7 @@ import { Button, ButtonProps } from "@/components/ui/button";
 type LoaderButtonProps = ButtonProps & {
   isLoading?: boolean;
   icon?: LucideIcon;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 export const LoaderButton = React.forwardRef<

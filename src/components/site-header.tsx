@@ -22,7 +22,7 @@ export function SiteHeader() {
           </Link>
           <SignedIn>
             <Link href="/browse-rooms" className="flex items-center text-xs">
-              <SearchIcon className="mr-2 h-4 w-4" /> Search rooms
+              <SearchIcon className="mr-2 h-4 w-4" /> Browse rooms
             </Link>
           </SignedIn>
         </div>

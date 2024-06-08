@@ -1,9 +1,11 @@
-import { getRoomsByQuery } from "@/use-cases/rooms";
+import { getRoomsByQuery } from "@/infrastructure/rooms";
+
+import { redirect } from "next/navigation";
+
+import { validateRequest } from "@/lib/auth";
 
 import { Toolbar } from "@/components/toolbar";
 import { RoomCard } from "@/components/room";
-import { validateRequest } from "@/lib/auth";
-import { redirect } from "next/navigation";
 
 export default async function BrowseRoomsPage({
   searchParams,
@@ -37,7 +39,7 @@ export default async function BrowseRoomsPage({
       ) : (
         <div className="flex flex-col gap-8 md:grid md:grid-cols-3">
           {rooms.map((room) => (
-            <RoomCard key={room.id} {...room} edit={room.userId === user.id} />
+            <RoomCard key={room.id} {...room} edit={user.id === room.userId} />
           ))}
         </div>
       )}
